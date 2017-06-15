@@ -2,6 +2,7 @@
     <head>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/app.js"></script>
@@ -9,16 +10,39 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <button type="button" id="smallData" class="btn btn-primary">Small Data</button>
-                    </div>
+                <div class="col-sm-12">
+                    <label>Enter Data to test</label>
                 </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <button type="button" id="hugeData" class="btn btn-danger">Huge Data</button>
+                <div class="col-sm-12">
+                    <div class="col-sm-4">
+                        <label>Enter the JSON Object to convert</label></br>
+                        <textarea id="txtOriginalData"></textarea>
                     </div>
-                </div>
+                    <div class="col-sm-4">
+                        <label>Enter the mapping JSON Objext</label></br>
+                        <textarea id="txtMappingData"></textarea>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label>&nbsp;</label></br>
+                                <button type="button" id="btnDynamic" class="btn btn-primary">Generate</button>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <label>Sample Data to test</label>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <button type="button" id="smallData" class="btn btn-primary">Small Data</button>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <button type="button" id="hugeData" class="btn btn-danger">Huge Data</button>
+                            </div>
+                        </div>
+                    </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">

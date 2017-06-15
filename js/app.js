@@ -13,6 +13,7 @@ function convertion(mappingObj,arrayObj){
     output(mappingObj,arrayObj,newArr);
 };
 function output(mappingObj,arrayObj,newArr){
+    $("#dvOutput").html("");
     $("#dvOutput").append(
         "<div class='col-sm-4'>"+
             "<div>Original Object</div>"+
@@ -35,7 +36,6 @@ function output(mappingObj,arrayObj,newArr){
     );
 }
 function handleSmallDataClick(){
-    $("#dvOutput").html("");
     var mappingObj={
         "Name":"EmployeeName",
         "Sal":"Salary"
@@ -57,7 +57,6 @@ function handleSmallDataClick(){
     convertion(mappingObj,arrayObj);
 }
 function handleHugeDataClick(){
-    $("#dvOutput").html("");
     var mappingObj={
         "Student":"Name",
         "Result":"Marks"
@@ -71,6 +70,14 @@ function handleHugeDataClick(){
     {"Student":"Adam","Result":"-17565"},{"Student":"Murali","Result":"-17576"},{"Student":"Krishna","Result":"-17587"},{"Student":"Sai","Result":"-17598"},{"Student":"Adam","Result":"-17609"},{"Student":"Murali","Result":"-17620"},{"Student":"Krishna","Result":"-17631"},{"Student":"Sai","Result":"-17642"},{"Student":"Adam","Result":"-17653"},{"Student":"Murali","Result":"-17664"},{"Student":"Krishna","Result":"-17675"},{"Student":"Sai","Result":"-17686"},{"Student":"Adam","Result":"-17697"},{"Student":"Murali","Result":"-17708"},{"Student":"Krishna","Result":"-17719"},{"Student":"Sai","Result":"-17730"},{"Student":"Adam","Result":"-17741"},{"Student":"Murali","Result":"-17752"},{"Student":"Krishna","Result":"-17763"},{"Student":"Sai","Result":"-17774"},{"Student":"Adam","Result":"-17785"},{"Student":"Murali","Result":"-17796"},{"Student":"Krishna","Result":"-17807"},{"Student":"Sai","Result":"-17818"},{"Student":"Adam","Result":"-17829"},{"Student":"Murali","Result":"-17840"},{"Student":"Krishna","Result":"-17851"},{"Student":"Sai","Result":"-17862"},{"Student":"Adam","Result":"-17873"},{"Student":"Murali","Result":"-17884"},{"Student":"Krishna","Result":"-17895"},{"Student":"Sai","Result":"-17906"},{"Student":"Adam","Result":"-17917"},{"Student":"Murali","Result":"-17928"},{"Student":"Krishna","Result":"-17939"},{"Student":"Sai","Result":"-17950"},{"Student":"Adam","Result":"-17961"},{"Student":"Murali","Result":"-17972"},{"Student":"Krishna","Result":"-17983"},{"Student":"Sai","Result":"-17994"},{"Student":"Adam","Result":"-18005"},{"Student":"Murali","Result":"-18016"},{"Student":"Krishna","Result":"-18027"},{"Student":"Sai","Result":"-18038"},{"Student":"Adam","Result":"-18049"},{"Student":"Murali","Result":"-18060"},{"Student":"Krishna","Result":"-18071"},{"Student":"Sai","Result":"-18082"},{"Student":"Adam","Result":"-18093"},{"Student":"Murali","Result":"-18104"},{"Student":"Krishna","Result":"-18115"},{"Student":"Sai","Result":"-18126"},{"Student":"Adam","Result":"-18137"},{"Student":"Murali","Result":"-18148"},{"Student":"Krishna","Result":"-18159"},{"Student":"Sai","Result":"-18170"},{"Student":"Adam","Result":"-18181"},{"Student":"Murali","Result":"-18192"},{"Student":"Krishna","Result":"-18203"},{"Student":"Sai","Result":"-18214"},{"Student":"Adam","Result":"-18225"},{"Student":"Murali","Result":"-18236"},{"Student":"Krishna","Result":"-18247"},{"Student":"Sai","Result":"-18258"},{"Student":"Adam","Result":"-18269"},{"Student":"Murali","Result":"-18280"},{"Student":"Krishna","Result":"-18291"},{"Student":"Sai","Result":"-18302"},{"Student":"Adam","Result":"-18313"},{"Student":"Murali","Result":"-18324"},{"Student":"Krishna","Result":"-18335"},{"Student":"Sai","Result":"-18346"},{"Student":"Adam","Result":"-18357"},{"Student":"Murali","Result":"-18368"},{"Student":"Krishna","Result":"-18379"},{"Student":"Sai","Result":"-18390"},{"Student":"Adam","Result":"-18401"},{"Student":"Murali","Result":"-18412"},{"Student":"Krishna","Result":"-18423"},{"Student":"Sai","Result":"-18434"},{"Student":"Adam","Result":"-18445"},{"Student":"Murali","Result":"-18456"},{"Student":"Krishna","Result":"-18467"},{"Student":"Sai","Result":"-18478"},{"Student":"Adam","Result":"-18489"},{"Student":"Murali","Result":"-18500"},{"Student":"Krishna","Result":"-18511"},{"Student":"Sai","Result":"-18522"},{"Student":"Adam","Result":"-18533"},{"Student":"Murali","Result":"-18544"},{"Student":"Krishna","Result":"-18555"},{"Student":"Sai","Result":"-18566"},{"Student":"Adam","Result":"-18577"},{"Student":"Murali","Result":"-18588"},{"Student":"Krishna","Result":"-18599"},{"Student":"Sai","Result":"-18610"},{"Student":"Adam","Result":"-18621"},{"Student":"Murali","Result":"-18632"},{"Student":"Krishna","Result":"-18643"},{"Student":"Sai","Result":"-18654"},{"Student":"Adam","Result":"-18665"},{"Student":"Murali","Result":"-18676"},{"Student":"Krishna","Result":"-18687"},{"Student":"Sai","Result":"-18698"},{"Student":"Adam","Result":"-18709"},{"Student":"Murali","Result":"-18720"},{"Student":"Krishna","Result":"-18731"},{"Student":"Sai","Result":"-18742"},{"Student":"Adam","Result":"-18753"},{"Student":"Murali","Result":"-18764"},{"Student":"Krishna","Result":"-18775"},{"Student":"Sai","Result":"-18786"},{"Student":"Adam","Result":"-18797"},{"Student":"Murali","Result":"-18808"},{"Student":"Krishna","Result":"-18819"},{"Student":"Sai","Result":"-18830"},{"Student":"Adam","Result":"-18841"},{"Student":"Murali","Result":"-18852"},{"Student":"Krishna","Result":"-18863"},{"Student":"Sai","Result":"-18874"},{"Student":"Adam","Result":"-18885"},{"Student":"Murali","Result":"-18896"},{"Student":"Krishna","Result":"-18907"},{"Student":"Sai","Result":"-18918"},{"Student":"Adam","Result":"-18929"},{"Student":"Murali","Result":"-18940"},{"Student":"Krishna","Result":"-18951"},{"Student":"Sai","Result":"-18962"},{"Student":"Adam","Result":"-18973"},{"Student":"Murali","Result":"-18984"},{"Student":"Krishna","Result":"-18995"},{"Student":"Sai","Result":"-19006"},{"Student":"Adam","Result":"-19017"},{"Student":"Murali","Result":"-19028"},{"Student":"Krishna","Result":"-19039"},{"Student":"Sai","Result":"-19050"},{"Student":"Adam","Result":"-19061"},{"Student":"Murali","Result":"-19072"},{"Student":"Krishna","Result":"-19083"},{"Student":"Sai","Result":"-19094"},{"Student":"Adam","Result":"-19105"},{"Student":"Murali","Result":"-19116"}];
     convertion(mappingObj,hugeObj);
 }
+function handleDynamicDataClick(){
+    var mappingObj;
+    var dataObj;
+    dataObj=JSON.parse($("#txtOriginalData").val());
+    mappingObj=JSON.parse($("#txtMappingData").val());
+    convertion(mappingObj,dataObj);
+}
 $(document).on("click","#smallData",handleSmallDataClick);
 $(document).on("click","#hugeData",handleHugeDataClick);
+$(document).on("click","#btnDynamic",handleDynamicDataClick);
 })()
